@@ -4,7 +4,7 @@ CREATE TABLE users (
                        password_hash VARCHAR(255) NOT NULL,
                        email         VARCHAR(100) NOT NULL UNIQUE,
                        about         TEXT,
-                       rating        FLOAT DEFAULT 0.0 CHECK (rating >= 0 AND rating <= 5)
+                       rating        NUMERIC(3,1) DEFAULT 0.0 CHECK (rating >= 0.0 AND rating <= 5.0)
 );
 
 CREATE TABLE skills (
