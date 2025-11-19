@@ -47,6 +47,7 @@ public class ReviewRepository {
             while (rs.next()) {
                 reviews.add(mapReview(rs));
             }
+            rs.close();
         } catch (SQLException e) {
             throw new RuntimeException("Ошибка получения отзывов", e);
         }

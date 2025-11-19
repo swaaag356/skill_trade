@@ -14,15 +14,15 @@
 
     <section class="stats" id="stats">
         <div class="stat">
-            <span class="stat__number" data-target="127">0</span>
+            <span class="stat__number" data-target="${countOfActiveOffers}">0</span>
             <span class="stat__label">активных предложений</span>
         </div>
         <div class="stat">
-            <span class="stat__number" data-target="89">0</span>
+            <span class="stat__number" data-target="${countOfDidOffers}">0</span>
             <span class="stat__label">обменов завершено</span>
         </div>
         <div class="stat">
-            <span class="stat__number" data-target="312">0</span>
+            <span class="stat__number" data-target="${userCount}">0</span>
             <span class="stat__label">участников</span>
         </div>
     </section>

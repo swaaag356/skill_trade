@@ -40,9 +40,7 @@ public class OfferServlet extends HttpServlet {
             req.setAttribute("pageTitle", "Новое предложение");
             forward(req, resp, "offer-create.ftl");
         } else if (path.startsWith("/offer/") && path.matches( "/offer/\\d+")) {
-            log.info("ЧТО ТО НЕ ТАК");
             Integer id = Integer.parseInt(path.substring("/offer/".length()));
-            log.info("ID: " + id.toString());
             TradeOffer offer = tradeOfferService.findById(id);
             if (offer == null) {
                 resp.sendError(404, "Предложение не найдено");

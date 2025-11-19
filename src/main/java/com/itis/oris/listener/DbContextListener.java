@@ -25,12 +25,14 @@ public class DbContextListener implements ServletContextListener {
         try {
             Connection conn = DbConnection.getConnection();
 
+            DataRepository dataRepository = new DataRepository();
             UserRepository userRepository = new UserRepository();
             SkillRepository skillRepository = new SkillRepository();
             TradeResponseRepository tradeResponseRepository = new TradeResponseRepository();
             TradeOfferRepository tradeOfferRepository = new TradeOfferRepository(tradeResponseRepository);
             ReviewRepository reviewRepository = new ReviewRepository();
 
+            DataService dataService = new DataService(dataRepository);
             UserService userService = new UserService(userRepository, conn);
             SkillService skillService = new SkillService(skillRepository, conn);
             TradeOfferService tradeOfferService = new TradeOfferService(tradeOfferRepository, skillRepository, tradeResponseRepository, conn);
@@ -44,6 +46,7 @@ public class DbContextListener implements ServletContextListener {
             context.setAttribute("tradeOfferRepository", tradeOfferRepository);
             context.setAttribute("tradeResponseRepository", tradeResponseRepository);
             context.setAttribute("reviewRepository", reviewRepository);
+            context.setAttribute("dataService", dataService);
 
             context.setAttribute("userService", userService);
             context.setAttribute("skillService", skillService);

@@ -9,7 +9,6 @@
         <p><strong>Автор:</strong> <a href="${contextPath}/profile?id=${offer.user.id}">${offer.user.username}</a></p>
         <p><strong>Статус:</strong> ${offer.status}</p>
 
-        <#-- Форма отклика -->
         <#if currentUser?? && offer.status == "ACTIVE" && currentUser.id != offer.user.id>
             <form action="${contextPath}/respond/offer/${offer.id}" method="post" class="form-inline">
                 <textarea name="message" placeholder="Ваше сообщение..." required></textarea>
@@ -17,7 +16,6 @@
             </form>
         </#if>
 
-        <#-- Кнопка завершения -->
         <#if currentUser?? && offer.status == "IN_PROGRESS">
             <#assign isParticipant = (currentUser.id == offer.user.id) ||
             (offer.responses?? && offer.responses?filter(r -> r.responder.id == currentUser.id)?size > 0)>
