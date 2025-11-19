@@ -1,4 +1,3 @@
-<#-- src/main/resources/static/template/register.ftl -->
 <#assign pageTitle="Регистрация">
 <#include "main.ftl">
 

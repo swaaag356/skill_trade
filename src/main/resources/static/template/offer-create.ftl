@@ -1,4 +1,3 @@
-<#-- src/main/resources/static/template/offer-create.ftl -->
 <#assign pageTitle="Новое предложение">
 <#include "main.ftl">
 

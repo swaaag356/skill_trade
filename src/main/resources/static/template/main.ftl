@@ -1,4 +1,3 @@
-<#-- src/main/resources/static/template/main.ftl -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>

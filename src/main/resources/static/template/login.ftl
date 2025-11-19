@@ -1,4 +1,3 @@
-<#-- src/main/resources/static/template/login.ftl -->
 <#assign pageTitle="Вход">
 <#include "main.ftl">
 

@@ -1,4 +1,3 @@
-<#-- src/main/resources/static/template/offer-detail.ftl -->
 <#assign pageTitle="Предложение #${offer.id}">
 <#include "main.ftl">
 

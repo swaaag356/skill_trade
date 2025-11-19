@@ -11,8 +11,6 @@ public class Skill {
     private Integer id;
     private String name;
 
-    private Set<User> users;
-
     private Set<TradeOffer> offeredIn;
 
     private Set<TradeOffer> requestedIn;

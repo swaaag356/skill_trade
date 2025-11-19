@@ -1,4 +1,3 @@
-<#-- src/main/resources/static/template/nav.ftl -->
 <nav class="nav">
     <div class="container">
         <ul class="nav__list">

@@ -1,4 +1,3 @@
-<#-- src/main/resources/static/template/header.ftl -->
 <header class="header">
     <div class="container header__inner">
         <a href="${contextPath}/" class="logo">SkillTrade</a>

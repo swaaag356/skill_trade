@@ -1,4 +1,3 @@
-<#-- src/main/resources/static/template/my-responses.ftl -->
 <#assign pageTitle="Мои отклики">
 <#include "main.ftl">
 

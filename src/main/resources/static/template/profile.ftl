@@ -1,4 +1,3 @@
-<#-- src/main/resources/static/template/profile.ftl -->
 <#assign pageTitle="Профиль">
 <#include "main.ftl">
 

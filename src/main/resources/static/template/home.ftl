@@ -1,4 +1,3 @@
-<#-- src/main/resources/static/template/home.ftl -->
 <#assign pageTitle="Главная">
 <#include "main.ftl">
 

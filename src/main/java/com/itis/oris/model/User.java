@@ -17,8 +17,6 @@ public class User {
     @Builder.Default
     private BigDecimal rating = BigDecimal.ZERO;
 
-    private Set<Skill> skills;
-
     private Set<TradeOffer> offers;
 
     private Set<TradeResponse> responses;
