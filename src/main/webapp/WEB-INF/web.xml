@@ -22,7 +22,7 @@
         <!-- FreemarkerServlet settings: -->
         <init-param>
             <param-name>TemplatePath</param-name>
-            <param-value>classpath:template</param-value>
+            <param-value>classpath:static/template</param-value>
         </init-param>
         <init-param>
             <param-name>NoCache</param-name>

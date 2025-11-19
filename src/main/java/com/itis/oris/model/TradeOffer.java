@@ -2,6 +2,8 @@ package com.itis.oris.model;
 
 import com.itis.oris.model.enums.Status;
 import lombok.*;
+
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -14,7 +16,8 @@ public class TradeOffer {
     private Skill offerSkill;
     private Skill requestSkill;
     private String description;
+    @Builder.Default
     private Status status = Status.ACTIVE;
 
-    private Set<TradeResponse> responses;
+    private List<TradeResponse> responses;
 }

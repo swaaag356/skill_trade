@@ -11,15 +11,12 @@ public class DbConnection {
 
     private static DataSource dataSource;
 
-    public static void init() throws ClassNotFoundException {
-        Class.forName("org.postgresql.Driver");
-
-        HikariConfig config = new HikariConfig("db.properties");
+    public static void init() {
+        HikariConfig config = new HikariConfig("/db.properties");
         dataSource = new HikariDataSource(config);
-
     }
 
-    public static Connection getConnection() throws SQLException, ClassNotFoundException {
+    public static Connection getConnection() throws SQLException {
         if (dataSource != null) {
             return dataSource.getConnection();
         } else {
@@ -33,7 +30,7 @@ public class DbConnection {
     }
 
     public static void destroy() {
-        ((HikariDataSource)dataSource).close();
+        ((HikariDataSource) dataSource).close();
     }
 
 }

@@ -14,6 +14,7 @@ public class User {
     private String passwordHash;
     private String email;
     private String about;
+    @Builder.Default
     private BigDecimal rating = BigDecimal.ZERO;
 
     private Set<Skill> skills;
