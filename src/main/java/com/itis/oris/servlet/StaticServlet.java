@@ -3,11 +3,11 @@ package com.itis.oris.servlet;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -42,13 +42,15 @@ public class StaticServlet extends HttpServlet {
         }
         resp.setContentType(contentType);
 
-        try (in; OutputStream out = resp.getOutputStream()) {
-            byte[] buffer = new byte[8192];
-            int bytesRead;
-            while ((bytesRead = in.read(buffer)) != -1) {
-                out.write(buffer, 0, bytesRead);
-            }
-        }
+        in.transferTo(resp.getOutputStream());
+
+//        try (in; OutputStream out = resp.getOutputStream()) {
+//            byte[] buffer = new byte[8192];
+//            int bytesRead;
+//            while ((bytesRead = in.read(buffer)) != -1) {
+//                out.write(buffer, 0, bytesRead);
+//            }
+//        }
     }
 }
 

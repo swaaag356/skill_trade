@@ -6,9 +6,9 @@ import com.itis.oris.service.TradeOfferService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.*;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.*;
 import java.io.IOException;
 
 @WebServlet({"/offers", "/offer/create", "/offer/*"})
@@ -58,10 +58,6 @@ public class OfferServlet extends HttpServlet {
         req.setAttribute("contextPath", req.getContextPath());
 
         User user = (User) req.getSession().getAttribute("currentUser");
-        if (user == null) {
-            resp.sendRedirect(req.getContextPath()+"/login");
-            return;
-        }
 
         try {
             TradeOffer offer = tradeOfferService.create(

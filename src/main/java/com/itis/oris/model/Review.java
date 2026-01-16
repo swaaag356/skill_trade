@@ -12,4 +12,6 @@ public class Review {
     private User toUser;
     private Integer rating;
     private String comment;
+
+
 }

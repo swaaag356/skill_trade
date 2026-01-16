@@ -134,6 +134,7 @@ public class TradeOfferRepository {
             if (rs.next()) {
                 offer.setId(rs.getInt(1));
             }
+            rs.close();
         } catch (SQLException e) {
             throw new RuntimeException("Ошибка создания предложения", e);
         }

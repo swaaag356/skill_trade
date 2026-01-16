@@ -16,27 +16,27 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <failOnMissingWebXml>false</failOnMissingWebXml>
 
-        <javax.servlet.version>4.0.1</javax.servlet.version>
-        <freemarker.version>2.3.32</freemarker.version>
+        <jakarta.servlet.version>6.0.0</jakarta.servlet.version>
+        <freemarker.version>2.3.31</freemarker.version>
         <postgresql.version>42.7.8</postgresql.version>
         <lombok.version>1.18.34</lombok.version>
         <bcrypt.version>0.10.2</bcrypt.version>
-        <log4j.version>2.23.1</log4j.version>
+        <log4j.version>2.25.3</log4j.version>
         <hikari.version>5.1.0</hikari.version>
     </properties>
 
     <dependencies>
 
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>${javax.servlet.version}</version>
+            <groupId>jakarta.servlet</groupId>
+            <artifactId>jakarta.servlet-api</artifactId>
+            <version>${jakarta.servlet.version}</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
-            <groupId>org.freemarker</groupId>
-            <artifactId>freemarker</artifactId>
+            <groupId>org.beangle.jakarta</groupId>
+            <artifactId>beangle-jakarta-freemarker</artifactId>
             <version>${freemarker.version}</version>
         </dependency>
 
@@ -84,7 +84,18 @@
     </dependencies>
 
     <build>
-        <finalName>skilltrade</finalName>
+        <finalName>skill</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+                <configuration>
+                    <release>17</release>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
+
 
 </project>
